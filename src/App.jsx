@@ -1,68 +1,68 @@
 const featuredProjects = [
   {
     title: 'LeaseLens',
-    label: 'AI-powered lease analysis',
+    label: 'Featured project',
     year: '2025',
-    summary:
-      'Designed an information tool that turns dense lease agreements into clear, actionable insights for students and first-time renters.',
-    impact: [
-      'Surfaced rent terms, fees, penalties, and responsibilities hidden in long legal documents',
-      'Used AI to generate summaries, highlight risks, and answer user questions in plain language',
-      'Reduced the effort required to interpret leases and helped users make more informed signing decisions',
-    ],
-    stack: ['AI', 'Information design', 'UX research', 'Web application'],
+    role: 'AI + full-stack product build',
+    problem:
+      'Lease agreements bury rent terms, fees, penalties, and responsibilities in long blocks of legal text.',
+    solution:
+      'Built a web app that parses lease content, summarizes key clauses, flags risk, and answers renter questions in plain language.',
+    outcome:
+      'Turned a slow manual review process into a faster decision tool for students and first-time renters.',
+    stack: ['JavaScript', 'AI', 'Web app', 'UX research', 'Information design'],
   },
   {
     title: 'AI Input Routing System',
     label: 'SeaWolf AI internship',
     year: '2025',
-    summary:
-      'Built Python-based routing, telemetry, and evaluation workflows for AI systems serving 100+ users.',
-    impact: [
-      'Reduced clarification cycles by 65%',
-      'Improved response performance by 30%',
-      'Lowered failure rates by 15% through edge-case testing',
-    ],
-    stack: ['Python', 'AI evaluation', 'Telemetry', 'Performance testing'],
+    role: 'Python + AI systems',
+    problem:
+      'The system was losing time to repeated clarification loops and had limited visibility into failures and latency.',
+    solution:
+      'Built Python routing logic, telemetry, logging, and evaluation workflows to improve request handling and monitoring.',
+    outcome:
+      'Reduced clarification cycles by 65%, improved response performance by 30%, and lowered failure rates by 15% through targeted edge-case testing.',
+    stack: ['Python', 'AI evaluation', 'Telemetry', 'Logging APIs', 'Performance testing'],
   },
   {
     title: 'BookSharer',
     label: 'Full-stack web app',
     year: '2025',
-    summary:
-      'Designed and shipped a web app for book discovery, reviews, and user management with secure REST APIs.',
-    impact: [
-      'Session-based authentication and RBAC-protected routes',
-      'MongoDB query optimization improved retrieval latency by 25%',
-      'Azure deployment with CI/CD for more reliable releases',
-    ],
-    stack: ['Node.js', 'Express', 'MongoDB', 'Azure'],
+    role: 'Backend + deployment',
+    problem:
+      'The product needed secure user accounts, searchable book data, and reliable review flows in one system.',
+    solution:
+      'Built REST APIs, session-based authentication, RBAC-protected routes, and optimized MongoDB queries for core app flows.',
+    outcome:
+      'Improved average query latency by 25% and shipped the app through Azure-based CI/CD.',
+    stack: ['Node.js', 'Express', 'MongoDB', 'Azure', 'CI/CD'],
   },
   {
     title: 'IRL Bingo',
     label: 'Mobile product',
     year: '2025',
-    summary:
-      'Built a real-time multiplayer iOS app focused on live board updates, shared gameplay, and scalable state sync.',
-    impact: [
-      'Firebase-backed synchronization across active users',
-      'Event-driven state management for consistent live updates',
-      'Secure data models with role-based access control',
-    ],
-    stack: ['Swift', 'SwiftUI', 'Firebase', 'MVVM'],
+    role: 'iOS + realtime sync',
+    problem:
+      'The app needed live shared game state, reliable board updates, and secure access across concurrent users.',
+    solution:
+      'Built a SwiftUI client with Firebase synchronization, event-driven state updates, and role-based access control.',
+    outcome:
+      'Delivered consistent live updates across players without losing shared state integrity.',
+    stack: ['Swift', 'SwiftUI', 'Firebase', 'MVVM', 'RBAC'],
   },
   {
     title: 'Habit Tracking App',
     label: 'Personal productivity',
     year: '2024',
-    summary:
-      'Created a full-stack habit tracker with authentication, user persistence, and a responsive front end.',
-    impact: [
-      'React front end paired with Node.js REST APIs',
-      'Firebase auth and secure backend persistence',
-      'Built around everyday task completion and accountability',
-    ],
-    stack: ['React', 'Node.js', 'Firebase', 'REST APIs'],
+    role: 'Frontend + API integration',
+    problem:
+      'Users needed a simple way to track recurring habits with secure accounts and persistent progress.',
+    solution:
+      'Built a React front end backed by Node.js APIs, Firebase authentication, and persistent user data storage.',
+    outcome:
+      'Shipped a responsive habit tracker with secure login and reliable cross-session data persistence.',
+    stack: ['React', 'Node.js', 'Firebase', 'REST APIs', 'Authentication'],
   },
 ]
 
@@ -98,9 +98,26 @@ const experience = [
 ]
 
 const principles = [
-  'Design with implementation in mind, so ideas survive contact with real constraints.',
-  'Use research, testing, and clear metrics to shape decisions instead of guessing.',
-  'Build products that feel thoughtful for users and legible for the teams maintaining them.',
+  'Start with the constraint, then design the system around it.',
+  'Use testing, metrics, and iteration instead of assumptions.',
+  'Keep the product simple for users and maintainable for the team.',
+]
+
+const roleInterests = [
+  'Software engineering',
+  'Data and analytics',
+  'AI and machine learning',
+]
+
+const coreTech = [
+  'Python',
+  'Java',
+  'JavaScript',
+  'React',
+  'Node.js',
+  'SQL',
+  'Firebase',
+  'Azure',
 ]
 
 function App() {
@@ -124,16 +141,14 @@ function App() {
       <main id="home">
         <section className="hero reveal">
           <div className="hero-copy">
-            <p className="eyebrow">Product, UX, and engineering portfolio</p>
-            <h1>
-              I build digital experiences that are technically sharp,
-              human-centered, and ready for the real world.
-            </h1>
+            <p className="eyebrow">Technical portfolio</p>
+            <h1>Software engineer focused on AI, data, and full-stack systems.</h1>
             <p className="lede">
               I&apos;m Varsha Bharath, an Informatics student at the University
               of Washington with minors in Business, Data Science, and Applied
-              Mathematics. My work sits at the intersection of product
-              thinking, AI systems, and full-stack development.
+              Mathematics. I&apos;m interested in software engineering, data,
+              and AI roles, especially where the work involves building systems
+              that help people make better decisions.
             </p>
 
             <div className="hero-actions">
@@ -154,6 +169,14 @@ function App() {
               <a href="mailto:varsha.bharath@gmail.com">
                 varsha.bharath@gmail.com
               </a>
+              <a href="tel:4255297999">425-529-7999</a>
+              <a
+                href="https://github.com/varsha-bhar"
+                target="_blank"
+                rel="noreferrer"
+              >
+                GitHub
+              </a>
               <a
                 href="https://linkedin.com/in/varshabharath"
                 target="_blank"
@@ -161,24 +184,44 @@ function App() {
               >
                 LinkedIn
               </a>
-              <a
-                href="https://www.notion.so/varsha-portfolio/Varsha-Bharath-UX-Portfolio-30a957ee4dc580d9aea7fc5d15750b6e"
-                target="_blank"
-                rel="noreferrer"
-              >
-                Previous portfolio
-              </a>
+            </div>
+
+            <div className="hero-strips">
+              <article className="strip-card">
+                <span className="panel-label">Role interests</span>
+                <ul className="compact-list">
+                  {roleInterests.map((item) => (
+                    <li key={item}>{item}</li>
+                  ))}
+                </ul>
+              </article>
+
+              <article className="strip-card">
+                <span className="panel-label">Core stack</span>
+                <div className="tag-row">
+                  {coreTech.map((item) => (
+                    <span className="tag" key={item}>
+                      {item}
+                    </span>
+                  ))}
+                </div>
+              </article>
             </div>
           </div>
 
           <aside className="hero-panel">
             <div className="panel-card intro-card">
-              <span className="panel-label">Currently focused on</span>
-              <ul>
-                <li>AI system quality, evaluation, and reliability</li>
-                <li>Full-stack product development</li>
-                <li>Student community building and event strategy</li>
-              </ul>
+              <span className="panel-label">Strongest project</span>
+              <h3>LeaseLens</h3>
+              <p>
+                A lease analysis tool that surfaces fees, obligations, and risk
+                before a renter signs.
+              </p>
+              <div className="tag-row">
+                <span className="tag">AI</span>
+                <span className="tag">Information design</span>
+                <span className="tag">Web application</span>
+              </div>
             </div>
 
             <div className="metrics-grid">
@@ -206,22 +249,19 @@ function App() {
           <div>
             <span className="band-label">What I bring</span>
             <p>
-              A hybrid background in product thinking, systems design, and
-              engineering execution.
+              Experience across backend systems, AI workflows, and user-facing applications.
             </p>
           </div>
           <div>
-            <span className="band-label">How I work</span>
+            <span className="band-label">How I frame projects</span>
             <p>
-              I like structured problem-solving, measurable outcomes, and
-              experiences that still feel warm and intuitive for users.
+              I write about projects in terms of the problem, the implementation, and the result.
             </p>
           </div>
           <div>
             <span className="band-label">What I care about</span>
             <p>
-              Responsible AI, accessible products, and tools that genuinely
-              help people make progress.
+              Clear systems, responsible AI, and products that make information easier to use.
             </p>
           </div>
         </section>
@@ -229,7 +269,7 @@ function App() {
         <section className="section reveal" id="work">
           <div className="section-heading">
             <p className="eyebrow">Selected work</p>
-            <h2>Projects shaped by systems thinking and product clarity.</h2>
+            <h2>Projects framed around the problem, the build, and the outcome.</h2>
           </div>
 
           <div className="project-grid">
@@ -240,13 +280,22 @@ function App() {
                   <span>{project.year}</span>
                 </div>
                 <h3>{project.title}</h3>
-                <p>{project.summary}</p>
+                <p className="project-role">{project.role}</p>
 
-                <ul className="impact-list">
-                  {project.impact.map((item) => (
-                    <li key={item}>{item}</li>
-                  ))}
-                </ul>
+                <div className="project-story">
+                  <div>
+                    <span className="story-label">Problem</span>
+                    <p>{project.problem}</p>
+                  </div>
+                  <div>
+                    <span className="story-label">Solution</span>
+                    <p>{project.solution}</p>
+                  </div>
+                  <div>
+                    <span className="story-label">Outcome</span>
+                    <p>{project.outcome}</p>
+                  </div>
+                </div>
 
                 <div className="tag-row">
                   {project.stack.map((item) => (
@@ -263,7 +312,7 @@ function App() {
         <section className="section two-column reveal" id="experience">
           <div className="section-heading sticky-heading">
             <p className="eyebrow">Experience</p>
-            <h2>From AI reliability work to teaching and student leadership.</h2>
+            <h2>AI systems, teaching, leadership, and product-focused engineering work.</h2>
           </div>
 
           <div className="timeline">
@@ -283,20 +332,16 @@ function App() {
         <section className="section split-panel reveal" id="about">
           <article className="essay-card">
             <p className="eyebrow">About</p>
-            <h2>
-              I&apos;m interested in the space where insight, interface, and
-              infrastructure meet.
-            </h2>
+            <h2>I want to build software at the intersection of SWE, data, and AI.</h2>
             <p>
-              My background started with teaching, outreach, and research, then
+              My background started in teaching, outreach, and research, then
               expanded into web development, databases, mobile apps, and AI
-              systems. That mix makes me especially excited by roles where I
-              can think through the user journey while still being close to the
-              implementation details.
+              systems. I like technical work where I can build the system and
+              stay close to the reason it needs to exist.
             </p>
             <p>
-              I care about products that are well-structured under the hood,
-              intuitive on the surface, and grounded in actual user needs.
+              I&apos;m especially interested in products that turn messy or
+              technical information into something clear enough to act on.
             </p>
           </article>
 
@@ -313,8 +358,7 @@ function App() {
         <section className="cta reveal" id="contact">
           <p className="eyebrow">Let&apos;s connect</p>
           <h2>
-            I&apos;m especially interested in internships and early-career roles
-            across product, UX engineering, software, and AI-focused teams.
+            I&apos;m looking for internships and early-career roles in software engineering, data, and AI.
           </h2>
           <div className="hero-actions">
             <a
@@ -325,11 +369,11 @@ function App() {
             </a>
             <a
               className="button button-secondary"
-              href="https://linkedin.com/in/varshabharath"
+              href="https://github.com/varsha-bhar"
               target="_blank"
               rel="noreferrer"
             >
-              Connect on LinkedIn
+              View GitHub
             </a>
           </div>
         </section>

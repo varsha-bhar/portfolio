@@ -168,6 +168,7 @@ main {
 
 .hero-actions,
 .hero-links,
+.hero-strips,
 .tag-row,
 .topnav {
   display: flex;
@@ -184,6 +185,12 @@ main {
   flex-wrap: wrap;
   margin-top: 1.5rem;
   color: var(--muted);
+}
+
+.hero-strips {
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 1.4rem;
 }
 
 .button {
@@ -234,18 +241,30 @@ main {
 .panel-card,
 .essay-card,
 .principles-card,
-.cta {
+.cta,
+.strip-card {
   border-radius: 28px;
   padding: 1.4rem;
 }
 
 .intro-card ul,
 .impact-list,
-.principles-list {
+.principles-list,
+.compact-list {
   margin: 0;
   padding-left: 1.1rem;
   color: var(--muted);
   line-height: 1.7;
+}
+
+.strip-card {
+  background: rgba(255, 250, 244, 0.62);
+  border: 1px solid rgba(255, 255, 255, 0.55);
+  box-shadow: var(--shadow);
+}
+
+.strip-card .tag-row {
+  margin-top: 0;
 }
 
 .metrics-grid {
@@ -270,6 +289,17 @@ main {
 .metric-card span {
   color: var(--muted);
   line-height: 1.5;
+}
+
+.intro-card h3 {
+  margin: 0 0 0.5rem;
+  font-size: 1.6rem;
+}
+
+.intro-card p {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.65;
 }
 
 .impact-band {
@@ -334,8 +364,26 @@ main {
   line-height: 1.7;
 }
 
-.impact-list {
+.project-role {
+  margin-top: 0.3rem;
+  color: var(--accent-deep);
+  font-weight: 700;
+}
+
+.project-story {
+  display: grid;
+  gap: 0.95rem;
   margin-top: 1rem;
+}
+
+.story-label {
+  display: inline-block;
+  margin-bottom: 0.3rem;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  font-size: 0.72rem;
+  font-weight: 800;
+  color: var(--accent-deep);
 }
 
 .tag-row {
@@ -485,6 +533,10 @@ main {
   .hero-actions {
     flex-direction: column;
     align-items: stretch;
+  }
+
+  .hero-links {
+    gap: 0.8rem;
   }
 
   .button {
