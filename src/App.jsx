@@ -1,106 +1,103 @@
 const featuredProjects = [
   {
+    id: 'leaselens',
     title: 'LeaseLens',
     label: 'Featured project',
     year: '2025',
-    role: 'AI + full-stack product build',
-    problem:
-      'Lease agreements bury rent terms, fees, penalties, and responsibilities in long blocks of legal text.',
-    solution:
-      'Built a web app that parses lease content, summarizes key clauses, flags risk, and answers renter questions in plain language.',
-    outcome:
-      'Turned a slow manual review process into a faster decision tool for students and first-time renters.',
-    stack: ['JavaScript', 'AI', 'Web app', 'UX research', 'Information design'],
+    role: 'Full-stack web app',
+    summary: 'A lease review tool that makes dense renter documents easier to understand.',
+    details: [
+      'Highlights key fees, responsibilities, and risk areas.',
+      'Designed for students and first-time renters.',
+    ],
+    stack: ['JavaScript', 'Web app', 'UX', 'Information design'],
+    repoUrl: 'https://github.com/varsha-bhar',
+    liveUrl: null,
   },
   {
-    title: 'AI Input Routing System',
-    label: 'SeaWolf AI internship',
-    year: '2025',
-    role: 'Python + AI systems',
-    problem:
-      'The system was losing time to repeated clarification loops and had limited visibility into failures and latency.',
-    solution:
-      'Built Python routing logic, telemetry, logging, and evaluation workflows to improve request handling and monitoring.',
-    outcome:
-      'Reduced clarification cycles by 65%, improved response performance by 30%, and lowered failure rates by 15% through targeted edge-case testing.',
-    stack: ['Python', 'AI evaluation', 'Telemetry', 'Logging APIs', 'Performance testing'],
-  },
-  {
+    id: 'booksharer',
     title: 'BookSharer',
     label: 'Full-stack web app',
     year: '2025',
     role: 'Backend + deployment',
-    problem:
-      'The product needed secure user accounts, searchable book data, and reliable review flows in one system.',
-    solution:
-      'Built REST APIs, session-based authentication, RBAC-protected routes, and optimized MongoDB queries for core app flows.',
-    outcome:
-      'Improved average query latency by 25% and shipped the app through Azure-based CI/CD.',
+    summary: 'A book-sharing platform with secure accounts, search, and reviews.',
+    details: [
+      'Built API flows, auth, and protected routes.',
+      'Deployed with CI/CD support on Azure.',
+    ],
     stack: ['Node.js', 'Express', 'MongoDB', 'Azure', 'CI/CD'],
+    repoUrl: 'https://github.com/varsha-bhar',
+    liveUrl: null,
   },
   {
+    id: 'irl-bingo',
     title: 'IRL Bingo',
     label: 'Mobile product',
     year: '2025',
     role: 'iOS + realtime sync',
-    problem:
-      'The app needed live shared game state, reliable board updates, and secure access across concurrent users.',
-    solution:
-      'Built a SwiftUI client with Firebase synchronization, event-driven state updates, and role-based access control.',
-    outcome:
-      'Delivered consistent live updates across players without losing shared state integrity.',
+    summary: 'A multiplayer iOS game with live board updates and shared state.',
+    details: [
+      'Built in SwiftUI with Firebase sync.',
+      'Designed for reliable realtime play.',
+    ],
     stack: ['Swift', 'SwiftUI', 'Firebase', 'MVVM', 'RBAC'],
+    repoUrl: 'https://github.com/varsha-bhar',
+    liveUrl: null,
   },
   {
+    id: 'habit-tracker',
     title: 'Habit Tracking App',
     label: 'Personal productivity',
     year: '2024',
     role: 'Frontend + API integration',
-    problem:
-      'Users needed a simple way to track recurring habits with secure accounts and persistent progress.',
-    solution:
-      'Built a React front end backed by Node.js APIs, Firebase authentication, and persistent user data storage.',
-    outcome:
-      'Shipped a responsive habit tracker with secure login and reliable cross-session data persistence.',
+    summary: 'A habit tracker with secure sign-in and saved progress.',
+    details: [
+      'Built with React, Node.js, and Firebase.',
+      'Focused on a clean daily tracking experience.',
+    ],
     stack: ['React', 'Node.js', 'Firebase', 'REST APIs', 'Authentication'],
+    repoUrl: 'https://github.com/varsha-bhar',
+    liveUrl: null,
   },
 ]
 
 const experience = [
   {
-    role: 'Artificial Intelligence Engineering Intern',
+    role: 'Software & Artificial Intelligence Engineering Intern',
+    org: 'USAFacts',
+    date: 'Jun 2026 - Sep 2026',
+    detail: 'Incoming AI & SWE intern building MCP-powered interfaces for government data and AI insights.',
+  },
+  {
+    role: 'AI Engineering Intern',
     org: 'SeaWolf AI',
     date: 'Jun 2025 - Sep 2025',
-    detail:
-      'Focused on AI input routing, telemetry, model-output evaluation, and edge-case testing under simulated traffic.',
+    detail: 'Worked on backend logic, evaluation, and testing for internal AI systems.',
   },
   {
     role: 'FIN205 Teaching Assistant',
     org: 'University of Washington',
     date: 'Apr 2025 - Present',
-    detail:
-      'Support 100+ students by grading assignments and case studies, running office hours, and coordinating with faculty.',
+    detail: 'Supported students through grading, office hours, and course coordination.',
   },
   {
     role: 'Director of Student Engagement',
     org: 'Women in Informatics',
     date: 'Mar 2025 - Present',
-    detail:
-      'Lead quarterly events for a 1,000+ student community and build industry partnerships with companies like Deloitte, Adobe, and Microsoft.',
+    detail: 'Plan events and build partnerships for the Women in Informatics community.',
   },
   {
     role: 'Research-Outreach Intern',
     org: 'Cledge',
     date: 'Mar 2022 - Feb 2023',
-    detail:
-      'Researched college admissions trends, compiled seminar data for an AI chatbot, and observed UI/UX and AI research workflows.',
+    detail: 'Supported research, outreach, and early product exploration work.',
   },
 ]
 
 const principles = [
-  'Start with the constraint, then design the system around it.',
-  'Use testing, metrics, and iteration instead of assumptions.',
-  'Keep the product simple for users and maintainable for the team.',
+  'Keep it clear.',
+  'Build with intention.',
+  'Make it useful.',
 ]
 
 const roleInterests = [
@@ -123,15 +120,19 @@ const coreTech = [
 function App() {
   return (
     <div className="page-shell">
-      <div className="aurora aurora-left" />
-      <div className="aurora aurora-right" />
+      <div className="grid-glow grid-glow-left" />
+      <div className="grid-glow grid-glow-right" />
+      <div className="grid-overlay" />
 
       <header className="topbar">
         <a className="brand" href="#home">
-          Varsha Bharath
+          <span className="brand-mark" aria-hidden="true">
+            VB
+          </span>
+          <span>Varsha Bharath</span>
         </a>
         <nav className="topnav" aria-label="Primary">
-          <a href="#work">Work</a>
+          <a href="#work">Projects</a>
           <a href="#experience">Experience</a>
           <a href="#about">About</a>
           <a href="#contact">Contact</a>
@@ -141,34 +142,30 @@ function App() {
       <main id="home">
         <section className="hero reveal">
           <div className="hero-copy">
-            <p className="eyebrow">Technical portfolio</p>
-            <h1>Software engineer focused on AI, data, and full-stack systems.</h1>
+            <p className="eyebrow">Software engineer · full-stack · data</p>
+            <h1>Building thoughtful software with a clean, product-focused approach.</h1>
             <p className="lede">
               I&apos;m Varsha Bharath, an Informatics student at the University
-              of Washington with minors in Business, Data Science, and Applied
-              Mathematics. I&apos;m interested in software engineering, data,
-              and AI roles, especially where the work involves building systems
-              that help people make better decisions.
+              of Washington interested in software engineering, data, and
+              product development.
             </p>
 
             <div className="hero-actions">
               <a className="button button-primary" href="#work">
-                View selected work
+                Explore projects
               </a>
               <a
                 className="button button-secondary"
-                href="/Varsha-Bharath-Resume.pdf"
+                href="/Varsha-Bharath-Resume-2026.pdf"
                 target="_blank"
                 rel="noreferrer"
               >
-                Download resume
+                Resume
               </a>
             </div>
 
             <div className="hero-links">
-              <a href="mailto:varsha.bharath@gmail.com">
-                varsha.bharath@gmail.com
-              </a>
+              <a href="mailto:varsha.bharath@gmail.com">varsha.bharath@gmail.com</a>
               <a href="tel:4255297999">425-529-7999</a>
               <a
                 href="https://github.com/varsha-bhar"
@@ -186,7 +183,22 @@ function App() {
               </a>
             </div>
 
-            <div className="hero-strips">
+          </div>
+
+          <aside className="hero-panel">
+            <div className="panel-card intro-card">
+              <div className="panel-kicker">
+                <span className="panel-label">Currently</span>
+                <span className="status-pill">Open to internships and early-career roles</span>
+              </div>
+              <h3>Clean builds. Thoughtful details.</h3>
+              <p>
+                I like building products that feel polished, useful, and easy
+                to navigate.
+              </p>
+            </div>
+
+            <div className="hero-strips hero-panel-strips">
               <article className="strip-card">
                 <span className="panel-label">Role interests</span>
                 <ul className="compact-list">
@@ -207,112 +219,100 @@ function App() {
                 </div>
               </article>
             </div>
-          </div>
-
-          <aside className="hero-panel">
-            <div className="panel-card intro-card">
-              <span className="panel-label">Strongest project</span>
-              <h3>LeaseLens</h3>
-              <p>
-                A lease analysis tool that surfaces fees, obligations, and risk
-                before a renter signs.
-              </p>
-              <div className="tag-row">
-                <span className="tag">AI</span>
-                <span className="tag">Information design</span>
-                <span className="tag">Web application</span>
-              </div>
-            </div>
-
-            <div className="metrics-grid">
-              <article className="metric-card">
-                <strong>65%</strong>
-                <span>fewer clarification cycles from AI routing work</span>
-              </article>
-              <article className="metric-card">
-                <strong>30%</strong>
-                <span>response performance improvement</span>
-              </article>
-              <article className="metric-card">
-                <strong>1,000+</strong>
-                <span>students served through Women in Informatics</span>
-              </article>
-              <article className="metric-card">
-                <strong>100+</strong>
-                <span>students supported as a teaching assistant</span>
-              </article>
-            </div>
           </aside>
-        </section>
-
-        <section className="impact-band reveal">
-          <div>
-            <span className="band-label">What I bring</span>
-            <p>
-              Experience across backend systems, AI workflows, and user-facing applications.
-            </p>
-          </div>
-          <div>
-            <span className="band-label">How I frame projects</span>
-            <p>
-              I write about projects in terms of the problem, the implementation, and the result.
-            </p>
-          </div>
-          <div>
-            <span className="band-label">What I care about</span>
-            <p>
-              Clear systems, responsible AI, and products that make information easier to use.
-            </p>
-          </div>
         </section>
 
         <section className="section reveal" id="work">
           <div className="section-heading">
             <p className="eyebrow">Selected work</p>
-            <h2>Projects framed around the problem, the build, and the outcome.</h2>
+            <h2>Projects with room to browse, scan, and open quickly.</h2>
           </div>
 
-          <div className="project-grid">
-            {featuredProjects.map((project) => (
-              <article className="project-card" key={project.title}>
-                <div className="project-header">
-                  <span>{project.label}</span>
-                  <span>{project.year}</span>
-                </div>
-                <h3>{project.title}</h3>
-                <p className="project-role">{project.role}</p>
-
-                <div className="project-story">
-                  <div>
-                    <span className="story-label">Problem</span>
-                    <p>{project.problem}</p>
-                  </div>
-                  <div>
-                    <span className="story-label">Solution</span>
-                    <p>{project.solution}</p>
-                  </div>
-                  <div>
-                    <span className="story-label">Outcome</span>
-                    <p>{project.outcome}</p>
-                  </div>
-                </div>
-
-                <div className="tag-row">
-                  {project.stack.map((item) => (
-                    <span className="tag" key={item}>
-                      {item}
-                    </span>
+          <div className="projects-layout">
+            <aside className="projects-sidebar">
+              <div className="sidebar-card">
+                <span className="panel-label">Jump to a project</span>
+                <div className="project-index" role="list">
+                  {featuredProjects.map((project, index) => (
+                    <a className="project-index-item" href={`#${project.id}`} key={project.id}>
+                      <span className="project-index-order">
+                        {String(index + 1).padStart(2, '0')}
+                      </span>
+                      <span>
+                        <strong>{project.title}</strong>
+                        <small>{project.role}</small>
+                      </span>
+                    </a>
                   ))}
                 </div>
-              </article>
-            ))}
+              </div>
+            </aside>
+
+            <div className="project-stack">
+              {featuredProjects.map((project) => (
+                <article className="project-card" id={project.id} key={project.title}>
+                  <div className="project-topline">
+                    <span>{project.label}</span>
+                    <span>{project.year}</span>
+                  </div>
+
+                  <div className="project-intro">
+                    <div>
+                      <h3>{project.title}</h3>
+                      <p className="project-role">{project.role}</p>
+                    </div>
+
+                    <div className="project-actions">
+                      <a
+                        className="project-link project-link-primary"
+                        href={project.repoUrl}
+                        target="_blank"
+                        rel="noreferrer"
+                      >
+                        View repo
+                      </a>
+                      {project.liveUrl ? (
+                        <a
+                          className="project-link"
+                          href={project.liveUrl}
+                          target="_blank"
+                          rel="noreferrer"
+                        >
+                          Open site
+                        </a>
+                      ) : (
+                        <span className="project-link project-link-disabled">
+                          Site link available on request
+                        </span>
+                      )}
+                    </div>
+                  </div>
+
+                  <p className="project-summary">{project.summary}</p>
+
+                  <ul className="project-points">
+                    {project.details.map((detail) => (
+                      <li key={detail}>{detail}</li>
+                    ))}
+                  </ul>
+
+                  <div className="tag-row">
+                    {project.stack.map((item) => (
+                      <span className="tag" key={item}>
+                        {item}
+                      </span>
+                    ))}
+                  </div>
+                </article>
+              ))}
+            </div>
           </div>
         </section>
 
         <section className="section two-column reveal" id="experience">
           <div className="section-heading sticky-heading">
             <p className="eyebrow">Experience</p>
-            <h2>AI systems, teaching, leadership, and product-focused engineering work.</h2>
+            <h2>Engineering, teaching, and community work.</h2>
           </div>
 
           <div className="timeline">
@@ -332,16 +332,11 @@ function App() {
         <section className="section split-panel reveal" id="about">
           <article className="essay-card">
             <p className="eyebrow">About</p>
-            <h2>I want to build software at the intersection of SWE, data, and AI.</h2>
+            <h2>I like building software that feels clear and well-made.</h2>
             <p>
-              My background started in teaching, outreach, and research, then
-              expanded into web development, databases, mobile apps, and AI
-              systems. I like technical work where I can build the system and
-              stay close to the reason it needs to exist.
-            </p>
-            <p>
-              I&apos;m especially interested in products that turn messy or
-              technical information into something clear enough to act on.
+              My background spans web development, mobile apps, backend systems,
+              and product-facing work. I care about thoughtful execution and a
+              strong user experience.
             </p>
           </article>
 
@@ -357,14 +352,9 @@ function App() {
 
         <section className="cta reveal" id="contact">
           <p className="eyebrow">Let&apos;s connect</p>
-          <h2>
-            I&apos;m looking for internships and early-career roles in software engineering, data, and AI.
-          </h2>
+          <h2>I&apos;m looking for internships and early-career roles in software engineering and data.</h2>
           <div className="hero-actions">
-            <a
-              className="button button-primary"
-              href="mailto:varsha.bharath@gmail.com"
-            >
+            <a className="button button-primary" href="mailto:varsha.bharath@gmail.com">
               Email me
             </a>
             <a
